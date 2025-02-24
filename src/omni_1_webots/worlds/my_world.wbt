@@ -1,0 +1,2399 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/CircleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 6.792024908496659e-06 6.792044114694442e-06 5.824897980057857
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+  radius 2
+}
+Robot {
+  children [
+    Shape {
+      appearance DEF white PBRAppearance {
+        baseColor 0.5 0.5 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.064
+        radius 0.11
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 1 0 -4e-06
+        anchor 0.125 0 -0.01
+        dampingConstant 0.1
+        staticFriction 0.01
+      }
+      device [
+        RotationalMotor {
+          name "wheel_0_joint"
+        }
+        PositionSensor {
+          name "wheel_0_joint_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.125 0 -0.01
+        rotation 0 1 0 1.5708
+        children [
+          Shape {
+            appearance DEF copper PBRAppearance {
+              baseColor 0.5 0.5 0.5
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.032
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1 0 -4e-06
+              anchor 0 0.04 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_0_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_0_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 0.04 -0.006
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_0"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.923879 -0.382684 -3e-06
+              anchor 0.015307 0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_1_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_1_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.015307 0.036955 0.006
+              rotation 0.19148004236209187 0.9626372129690672 -0.1914810423623131 1.608869
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_1"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.707105 -0.707108 -3e-06
+              anchor 0.028284 0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_2_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_2_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.028284 0.028284 -0.006
+              rotation 0.3574059992787547 0.8628559982587566 -0.35740799927875067 1.717775
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_2"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.382681 -0.923881 -1e-06
+              anchor 0.036955 0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_3_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_3_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.036955 0.015307 0.006
+              rotation 0.485652116138861 0.7268301738141887 -0.4856541161393393 1.884582
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_3"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -4e-06 -1 0
+              anchor 0.04 0 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_4_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_4_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.04 0 -0.006
+              rotation 0.5773496025226482 0.5773496025226482 -0.5773516025212713 2.094399
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_4"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.382688 -0.923878 1e-06
+              anchor 0.036955 -0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_5_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_5_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.036955 -0.015307 0.006
+              rotation 0.6393371324546843 0.42719108850332294 -0.6393401324553057 2.334145
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_5"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.707111 -0.707103 3e-06
+              anchor 0.028284 -0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_6_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_6_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.028284 -0.028284 -0.006
+              rotation 0.6785971692089039 0.28108307008835337 -0.6786001692096519 2.593569
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_6"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.923882 -0.382677 3e-06
+              anchor 0.015307 -0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_7_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_7_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.015307 -0.036955 0.006
+              rotation 0.7002132339181735 0.139279046528541 -0.7002162339191756 2.864816
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_7"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1 0 -4e-06
+              anchor 0 -0.04 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_8_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_8_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.04 -0.006
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_8"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.923879 -0.382684 -3e-06
+              anchor -0.015307 -0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_9_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_9_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.015307 -0.036955 0.006
+              rotation 0.19148004236209187 0.9626372129690672 -0.1914810423623131 1.608869
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_9"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.707105 -0.707108 -3e-06
+              anchor -0.028284 -0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_10_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_10_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.028284 -0.028284 -0.006
+              rotation 0.3574059992787547 0.8628559982587566 -0.35740799927875067 1.717775
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_10"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.382681 -0.923881 -1e-06
+              anchor -0.036955 -0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_11_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_11_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.036955 -0.015307 0.006
+              rotation 0.485652116138861 0.7268301738141887 -0.4856541161393393 1.884582
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_11"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -4e-06 -1 0
+              anchor -0.04 0 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_12_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_12_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.04 0 -0.006
+              rotation 0.5773496025226482 0.5773496025226482 -0.5773516025212713 2.094399
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_12"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.382688 -0.923878 1e-06
+              anchor -0.036955 0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_13_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_13_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.036955 0.015307 0.006
+              rotation 0.6393371324546843 0.42719108850332294 -0.6393401324553057 2.334145
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_13"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.707111 -0.707103 3e-06
+              anchor -0.028284 0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_14_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_14_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.028284 0.028284 -0.006
+              rotation 0.6785971692089039 0.28108307008835337 -0.6786001692096519 2.593569
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_14"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.923882 -0.382677 3e-06
+              anchor -0.015307 0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_0_roller_15_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_0_roller_15_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.015307 0.036955 0.006
+              rotation 0.7002132339181735 0.139279046528541 -0.7002162339191756 2.864816
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_0_roller_15"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+        ]
+        name "wheel_0"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+          density -1
+          mass 0.15
+          centerOfMass [
+            0 0 0
+          ]
+          inertiaMatrix [
+            0.0002 0.0002 0.0002
+            0 0 0
+          ]
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis -0.500004 0.866023 -4e-06
+        anchor -0.0625 0.10825 -0.01
+        dampingConstant 0.1
+        staticFriction 0.01
+      }
+      device [
+        RotationalMotor {
+          name "wheel_120_joint"
+        }
+        PositionSensor {
+          name "wheel_120_joint_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.0625 0.10825 -0.01
+        rotation -0.6546550822237016 0.37796304747159487 0.6546530822234504 2.418863
+        children [
+          Shape {
+            appearance USE copper
+            geometry Cylinder {
+              height 0.02
+              radius 0.032
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1 0 -4e-06
+              anchor 0 0.04 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_0_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_0_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 0.04 -0.006
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_0"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.923879 -0.382684 -3e-06
+              anchor 0.015307 0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_1_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_1_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.015307 0.036955 0.006
+              rotation 0.19148004236209187 0.9626372129690672 -0.1914810423623131 1.608869
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_1"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.707105 -0.707108 -3e-06
+              anchor 0.028284 0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_2_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_2_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.028284 0.028284 -0.006
+              rotation 0.3574059992787547 0.8628559982587566 -0.35740799927875067 1.717775
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_2"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.382681 -0.923881 -1e-06
+              anchor 0.036955 0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_3_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_3_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.036955 0.015307 0.006
+              rotation 0.485652116138861 0.7268301738141887 -0.4856541161393393 1.884582
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_3"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -4e-06 -1 0
+              anchor 0.04 0 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_4_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_4_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.04 0 -0.006
+              rotation 0.5773496025226482 0.5773496025226482 -0.5773516025212713 2.094399
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_4"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.382688 -0.923878 1e-06
+              anchor 0.036955 -0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_5_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_5_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.036955 -0.015307 0.006
+              rotation 0.6393371324546843 0.42719108850332294 -0.6393401324553057 2.334145
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_5"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.707111 -0.707103 3e-06
+              anchor 0.028284 -0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_6_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_6_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.028284 -0.028284 -0.006
+              rotation 0.6785971692089039 0.28108307008835337 -0.6786001692096519 2.593569
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_6"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.923882 -0.382677 3e-06
+              anchor 0.015307 -0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_7_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_7_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.015307 -0.036955 0.006
+              rotation 0.7002132339181735 0.139279046528541 -0.7002162339191756 2.864816
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_7"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1 0 -4e-06
+              anchor 0 -0.04 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_8_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_8_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.04 -0.006
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_8"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.923879 -0.382684 -3e-06
+              anchor -0.015307 -0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_9_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_9_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.015307 -0.036955 0.006
+              rotation 0.19148004236209187 0.9626372129690672 -0.1914810423623131 1.608869
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_9"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.707105 -0.707108 -3e-06
+              anchor -0.028284 -0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_10_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_10_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.028284 -0.028284 -0.006
+              rotation 0.3574059992787547 0.8628559982587566 -0.35740799927875067 1.717775
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_10"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.382681 -0.923881 -1e-06
+              anchor -0.036955 -0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_11_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_11_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.036955 -0.015307 0.006
+              rotation 0.485652116138861 0.7268301738141887 -0.4856541161393393 1.884582
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_11"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -4e-06 -1 0
+              anchor -0.04 0 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_12_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_12_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.04 0 -0.006
+              rotation 0.5773496025226482 0.5773496025226482 -0.5773516025212713 2.094399
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_12"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.382688 -0.923878 1e-06
+              anchor -0.036955 0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_13_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_13_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.036955 0.015307 0.006
+              rotation 0.6393371324546843 0.42719108850332294 -0.6393401324553057 2.334145
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_13"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.707111 -0.707103 3e-06
+              anchor -0.028284 0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_14_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_14_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.028284 0.028284 -0.006
+              rotation 0.6785971692089039 0.28108307008835337 -0.6786001692096519 2.593569
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_14"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.923882 -0.382677 3e-06
+              anchor -0.015307 0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_120_roller_15_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_120_roller_15_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.015307 0.036955 0.006
+              rotation 0.7002132339181735 0.139279046528541 -0.7002162339191756 2.864816
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_120_roller_15"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+        ]
+        name "wheel_120"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+          density -1
+          mass 0.15
+          centerOfMass [
+            0 0 0
+          ]
+          inertiaMatrix [
+            0.0002 0.0002 0.0002
+            0 0 0
+          ]
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis -0.500004 -0.866023 -4e-06
+        anchor -0.0625 -0.10825 -0.01
+        dampingConstant 0.1
+        staticFriction 0.01
+      }
+      device [
+        RotationalMotor {
+          name "wheel_240_joint"
+        }
+        PositionSensor {
+          name "wheel_240_joint_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.0625 -0.10825 -0.01
+        rotation 0.6546550822237016 0.37796304747159487 -0.6546530822234504 2.418863
+        children [
+          Shape {
+            appearance USE copper
+            geometry Cylinder {
+              height 0.02
+              radius 0.032
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1 0 -4e-06
+              anchor 0 0.04 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_0_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_0_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 0.04 -0.006
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_0"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.923879 -0.382684 -3e-06
+              anchor 0.015307 0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_1_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_1_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.015307 0.036955 0.006
+              rotation 0.19148004236209187 0.9626372129690672 -0.1914810423623131 1.608869
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_1"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.707105 -0.707108 -3e-06
+              anchor 0.028284 0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_2_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_2_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.028284 0.028284 -0.006
+              rotation 0.3574059992787547 0.8628559982587566 -0.35740799927875067 1.717775
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_2"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.382681 -0.923881 -1e-06
+              anchor 0.036955 0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_3_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_3_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.036955 0.015307 0.006
+              rotation 0.485652116138861 0.7268301738141887 -0.4856541161393393 1.884582
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_3"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -4e-06 -1 0
+              anchor 0.04 0 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_4_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_4_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.04 0 -0.006
+              rotation 0.5773496025226482 0.5773496025226482 -0.5773516025212713 2.094399
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_4"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.382688 -0.923878 1e-06
+              anchor 0.036955 -0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_5_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_5_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.036955 -0.015307 0.006
+              rotation 0.6393371324546843 0.42719108850332294 -0.6393401324553057 2.334145
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_5"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.707111 -0.707103 3e-06
+              anchor 0.028284 -0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_6_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_6_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.028284 -0.028284 -0.006
+              rotation 0.6785971692089039 0.28108307008835337 -0.6786001692096519 2.593569
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_6"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.923882 -0.382677 3e-06
+              anchor 0.015307 -0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_7_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_7_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.015307 -0.036955 0.006
+              rotation 0.7002132339181735 0.139279046528541 -0.7002162339191756 2.864816
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_7"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 1 0 -4e-06
+              anchor 0 -0.04 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_8_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_8_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.04 -0.006
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_8"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.923879 -0.382684 -3e-06
+              anchor -0.015307 -0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_9_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_9_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.015307 -0.036955 0.006
+              rotation 0.19148004236209187 0.9626372129690672 -0.1914810423623131 1.608869
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_9"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.707105 -0.707108 -3e-06
+              anchor -0.028284 -0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_10_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_10_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.028284 -0.028284 -0.006
+              rotation 0.3574059992787547 0.8628559982587566 -0.35740799927875067 1.717775
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_10"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.382681 -0.923881 -1e-06
+              anchor -0.036955 -0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_11_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_11_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.036955 -0.015307 0.006
+              rotation 0.485652116138861 0.7268301738141887 -0.4856541161393393 1.884582
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_11"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -4e-06 -1 0
+              anchor -0.04 0 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_12_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_12_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.04 0 -0.006
+              rotation 0.5773496025226482 0.5773496025226482 -0.5773516025212713 2.094399
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_12"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.382688 -0.923878 1e-06
+              anchor -0.036955 0.015307 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_13_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_13_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.036955 0.015307 0.006
+              rotation 0.6393371324546843 0.42719108850332294 -0.6393401324553057 2.334145
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_13"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.707111 -0.707103 3e-06
+              anchor -0.028284 0.028284 -0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_14_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_14_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.028284 0.028284 -0.006
+              rotation 0.6785971692089039 0.28108307008835337 -0.6786001692096519 2.593569
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_14"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.923882 -0.382677 3e-06
+              anchor -0.015307 0.036955 0.006
+              dampingConstant 0.01
+              staticFriction 0.01
+            }
+            device [
+              RotationalMotor {
+                name "wheel_240_roller_15_joint"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "wheel_240_roller_15_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.015307 0.036955 0.006
+              rotation 0.7002132339181735 0.139279046528541 -0.7002162339191756 2.864816
+              children [
+                Shape {
+                  appearance USE white
+                  geometry Cylinder {
+                    height 0.012
+                    radius 0.006
+                  }
+                }
+              ]
+              name "wheel_240_roller_15"
+              boundingObject Cylinder {
+                height 0.012
+                radius 0.006
+              }
+              physics Physics {
+                density -1
+                mass 0.01
+                centerOfMass [
+                  0 0 0
+                ]
+                inertiaMatrix [
+                  1e-05 1e-05 1e-05
+                  0 0 0
+                ]
+              }
+            }
+          }
+        ]
+        name "wheel_240"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+          density -1
+          mass 0.15
+          centerOfMass [
+            0 0 0
+          ]
+          inertiaMatrix [
+            0.0002 0.0002 0.0002
+            0 0 0
+          ]
+        }
+      }
+    }
+  ]
+  name "omni_1"
+  boundingObject Cylinder {
+    height 0.064
+    radius 0.11
+  }
+  physics Physics {
+    density -1
+    mass 1
+    centerOfMass [
+      0 0 0
+    ]
+    inertiaMatrix [
+      0.001 0.001 0.001
+      0 0 0
+    ]
+  }
+  controller "<extern>"
+}
