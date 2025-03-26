@@ -1,1 +1,1 @@
-# Mora da se git klonira webots-ros2, da stoji u src kao pkg
+# Mora da se git instalira webots-ros2, ne mora da bude u omni-1-ws
