@@ -4,12 +4,11 @@
   <name>omni_1_webots</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="hostuser@todo.todo">hostuser</maintainer>
+  <maintainer email="l.popadic.2001@gmail.com">hostuser</maintainer>
   <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
   <depend>geometry_msgs</depend>
-  <depend>example_interfaces</depend>
   <depend>webots_ros2_driver</depend>
 
   <test_depend>ament_copyright</test_depend>
