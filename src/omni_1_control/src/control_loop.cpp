@@ -1,3 +1,4 @@
+#include "geometry_msgs/msg/pose2_d.hpp"
 #include "omni_1_interfaces/msg/motor_command_array.hpp"
 #include "rclcpp/rclcpp.hpp"
 
@@ -9,6 +10,13 @@ public:
     this->declare_parameter ("freq_hz", 10.0);
     freq_hz_ = this->get_parameter ("freq_hz").as_double ();
     period_us_ = 1000000 / freq_hz_;
+
+    this->declare_parameter ("p", 1.0);
+    p_ = this->get_parameter ("p").as_double ();
+    this->declare_parameter ("i", 0.0);
+    i_ = this->get_parameter ("p").as_double ();
+    this->declare_parameter ("p", 0.0);
+    d_ = this->get_parameter ("d").as_double ();
 
     // TODO:
     // - uzima mete: action
@@ -23,10 +31,11 @@ public:
   }
 
 private:
+  double p_, i_, d_;
   double freq_hz_;
   int64_t period_us_;
   double x_ref, y_ref, phi_ref;
-  double w0 = 0, w120 = 0, w240 = 0;
+  double w0 = 2, w120 = -2, w240 = 0;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<omni_1_interfaces::msg::MotorCommandArray>::SharedPtr
       motor_cmd_publisher_;
