@@ -28,9 +28,9 @@
 
 <link name="wheel-frame0">
   <inertial>
-    <origin xyz="0 -2.5766450655557467 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <mass value="0.5"/>
-    <inertia ixx="-50.918622" iyy="0.000272" izz="-50.918622" ixy="1.8e-05" iyz="1.3e-05" ixz="0.0"/>
+    <inertia ixx="1.7e-4" iyy="1.8e-4" izz="1.7e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -49,9 +49,9 @@
 
 <link name="wheel-frame120">
   <inertial>
-    <origin xyz="0 -2.5766450655557467 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <mass value="0.5"/>
-    <inertia ixx="-50.918622" iyy="0.000272" izz="-50.918622" ixy="1.8e-05" iyz="1.3e-05" ixz="0.0"/>
+    <inertia ixx="1.7e-4" iyy="1.8e-4" izz="1.7e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -70,9 +70,9 @@
 
 <link name="wheel-frame240">
   <inertial>
-    <origin xyz="0 -2.5766450655557467 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <mass value="0.5"/>
-    <inertia ixx="-50.918622" iyy="0.000272" izz="-50.918622" ixy="1.8e-05" iyz="1.3e-05" ixz="0.0"/>
+    <inertia ixx="1.7e-4" iyy="1.8e-4" izz="1.7e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
