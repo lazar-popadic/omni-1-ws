@@ -7,8 +7,8 @@
 
 <link name="base_link">
   <inertial>
-    <origin xyz="-2.2588966192100697e-11 -1.5759242054663752e-12 3.8602905547603776" rpy="0 0 0"/>
-    <mass value="4.810857321318848"/>
+    <origin xyz="0 0 3.8" rpy="0 0 0"/>
+    <mass value="4.8"/>
     <inertia ixx="-71.670522" iyy="-71.670522" izz="0.0224" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
@@ -28,19 +28,19 @@
 
 <link name="wheel-frame0">
   <inertial>
-    <origin xyz="-3.5250916270368613e-06 -2.5766450655557467 -2.5019740667483452e-06" rpy="0 0 0"/>
-    <mass value="0.5173431185653956"/>
+    <origin xyz="0 -2.5766450655557467 0" rpy="0 0 0"/>
+    <mass value="0.5"/>
     <inertia ixx="-50.918622" iyy="0.000272" izz="-50.918622" ixy="1.8e-05" iyz="1.3e-05" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-0.0 7.34472832686753 -0.0" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame0.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.0 7.34472832686753 -0.0" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame0.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -49,19 +49,19 @@
 
 <link name="wheel-frame120">
   <inertial>
-    <origin xyz="-2.2314418458529106 1.2883194799589752 2.5019740667483435e-06" rpy="0 0 0"/>
-    <mass value="0.5173431185653956"/>
-    <inertia ixx="-12.729436" iyy="-38.188914" izz="-50.918622" ixy="-22.048519" iyz="6e-06" ixz="-1.1e-05"/>
+    <origin xyz="0 -2.5766450655557467 0" rpy="0 0 0"/>
+    <mass value="0.5"/>
+    <inertia ixx="-50.918622" iyy="0.000272" izz="-50.918622" ixy="1.8e-05" iyz="1.3e-05" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="6.360721314962455 -3.672364163433773 -7.888609052210118e-31" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame120.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="6.360721314962455 -3.672364163433773 -7.888609052210118e-31" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame120.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -70,46 +70,46 @@
 
 <link name="wheel-frame240">
   <inertial>
-    <origin xyz="2.231441845852908 1.288319479958973 -2.501974066748344e-06" rpy="0 0 0"/>
-    <mass value="0.5173431185653956"/>
-    <inertia ixx="-12.729436" iyy="-38.188914" izz="-50.918622" ixy="22.048519" iyz="-6e-06" ixz="-1.1e-05"/>
+    <origin xyz="0 -2.5766450655557467 0" rpy="0 0 0"/>
+    <mass value="0.5"/>
+    <inertia ixx="-50.918622" iyy="0.000272" izz="-50.918622" ixy="1.8e-05" iyz="1.3e-05" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-6.360721314962463 -3.672364163433763 1.9721522630525295e-31" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame240.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-6.360721314962463 -3.672364163433763 1.9721522630525295e-31" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame240.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<joint name="Revolute8" type="revolute">
-  <origin xyz="0.0 -7.34472832686753 0.0" rpy="0 0 0"/>
+<joint name="wheel-frame0" type="revolute">
+  <origin xyz="0.0 -0.1 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="wheel-frame0"/>
   <axis xyz="0.0 -1.0 0.0"/>
   <limit upper="3.14159" lower="-3.14159" effort="100" velocity="100"/>
 </joint>
-
-<joint name="Revolute11" type="revolute">
-  <origin xyz="-6.360721314962455 3.672364163433773 7.888609052210118e-31" rpy="0 0 0"/>
+ 
+<joint name="wheel-frame120" type="revolute">
+  <origin xyz="0.08660254038 0.05 0.0" rpy="0 0 2.094395102"/>
   <parent link="base_link"/>
   <child link="wheel-frame120"/>
-  <axis xyz="-0.8660254037844384 0.5000000000000004 0.0"/>
+  <axis xyz="0.0 -1.0 0.0"/>
   <limit upper="3.14159" lower="-3.14159" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute12" type="revolute">
-  <origin xyz="6.360721314962463 3.672364163433763 -1.9721522630525295e-31" rpy="0 0 0"/>
+<joint name="wheel-frame240" type="revolute">
+  <origin xyz="-0.08660254038 0.05 0.0" rpy="0 0 4.188790205"/>
   <parent link="base_link"/>
   <child link="wheel-frame240"/>
-  <axis xyz="0.8660254037844388 0.49999999999999983 0.0"/>
+  <axis xyz="0.0 -1.0 0.0"/>
   <limit upper="3.14159" lower="-3.14159" effort="100" velocity="100"/>
 </joint>
 
