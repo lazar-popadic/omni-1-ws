@@ -2,7 +2,15 @@
 <robot name="urdf">
 
 <material name="silver">
-  <color rgba="0.700 0.700 0.700 1.000"/>
+  <color rgba="0.8 0.8 0.8 1.0"/>
+</material>
+
+<material name="grey">
+  <color rgba="0.4 0.4 0.4 1.0"/>
+</material>
+
+<material name="black">
+  <color rgba="0.1 0.1 0.1 1.0"/>
 </material>
 
 <link name="base_link">
@@ -37,7 +45,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame0.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -58,7 +66,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame120.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -79,7 +87,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/wheel-frame240.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -100,7 +108,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -121,7 +129,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -142,7 +150,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -163,7 +171,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -184,7 +192,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -205,7 +213,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -226,7 +234,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -247,7 +255,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -268,7 +276,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -289,7 +297,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -310,7 +318,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -331,7 +339,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -352,7 +360,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -373,7 +381,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -394,7 +402,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -415,7 +423,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -436,7 +444,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
@@ -457,7 +465,7 @@
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
