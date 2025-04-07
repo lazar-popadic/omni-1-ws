@@ -96,14 +96,119 @@
     <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="roller-0-1">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.02"/>
+    <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="roller-0-2">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.02"/>
+    <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="roller-0-3">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.02"/>
+    <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="roller-0-4">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.02"/>
+    <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="roller-0-5">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.02"/>
+    <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 -0.024" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -135,9 +240,49 @@
 </joint>
 
 <joint name="wheel0-roller0" type="continuous">
-  <origin xyz="0.0 0.013 0.03" rpy="0 0 0"/>
+  <origin xyz="0.0 0.013 0.024" rpy="0 0 0"/>
   <parent link="wheel-frame0"/>
   <child link="roller-0-0"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.01" friction="0.1" />
+</joint>
+
+<joint name="wheel0-roller1" type="continuous">
+  <origin xyz="0.0207846 0.013 -0.012" rpy="0 2.094395102 0"/>
+  <parent link="wheel-frame0"/>
+  <child link="roller-0-1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.01" friction="0.1" />
+</joint>
+
+<joint name="wheel0-roller2" type="continuous">
+  <origin xyz="-0.0207846 0.013 -0.012" rpy="0 4.188790205 0"/>
+  <parent link="wheel-frame0"/>
+  <child link="roller-0-2"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.01" friction="0.1" />
+</joint>
+
+<joint name="wheel0-roller3" type="continuous">
+  <origin xyz="0.0207846 -0.013 0.012" rpy="0 1.0471975512 0"/>
+  <parent link="wheel-frame0"/>
+  <child link="roller-0-3"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.01" friction="0.1" />
+</joint>
+
+<joint name="wheel0-roller4" type="continuous">
+  <origin xyz="0.0 -0.013 -0.024" rpy="0 3.1415926536 0"/>
+  <parent link="wheel-frame0"/>
+  <child link="roller-0-4"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.01" friction="0.1" />
+</joint>
+
+<joint name="wheel0-roller5" type="continuous">
+  <origin xyz="-0.0207846 -0.013 0.012" rpy="0 5.235987756 0"/>
+  <parent link="wheel-frame0"/>
+  <child link="roller-0-5"/>
   <axis xyz="1.0 0.0 0.0"/>
   <dynamics damping="0.01" friction="0.1" />
 </joint>
