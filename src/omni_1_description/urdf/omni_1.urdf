@@ -89,28 +89,57 @@
   </collision>
 </link>
 
-<joint name="wheel-frame0" type="revolute">
+<link name="roller-0-0">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.02"/>
+    <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni_1_description/meshes/roller.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="wheel-frame0" type="continuous">
   <origin xyz="0.0 -0.1 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="wheel-frame0"/>
   <axis xyz="0.0 -1.0 0.0"/>
-  <limit upper="3.14159" lower="-3.14159" effort="100" velocity="100"/>
+  <limit effort="100" velocity="100"/>
 </joint>
  
-<joint name="wheel-frame120" type="revolute">
+<joint name="wheel-frame120" type="continuous">
   <origin xyz="0.08660254038 0.05 0.0" rpy="0 0 2.094395102"/>
   <parent link="base_link"/>
   <child link="wheel-frame120"/>
   <axis xyz="0.0 -1.0 0.0"/>
-  <limit upper="3.14159" lower="-3.14159" effort="100" velocity="100"/>
+  <limit effort="100" velocity="100"/>
 </joint>
 
-<joint name="wheel-frame240" type="revolute">
+<joint name="wheel-frame240" type="continuous">
   <origin xyz="-0.08660254038 0.05 0.0" rpy="0 0 4.188790205"/>
   <parent link="base_link"/>
   <child link="wheel-frame240"/>
   <axis xyz="0.0 -1.0 0.0"/>
-  <limit upper="3.14159" lower="-3.14159" effort="100" velocity="100"/>
+  <limit effort="100" velocity="100"/>
+</joint>
+
+<joint name="wheel0-roller0" type="continuous">
+  <origin xyz="0.0 0.013 0.03" rpy="0 0 0"/>
+  <parent link="wheel-frame0"/>
+  <child link="roller-0-0"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.01" friction="0.1" />
 </joint>
 
 </robot>
