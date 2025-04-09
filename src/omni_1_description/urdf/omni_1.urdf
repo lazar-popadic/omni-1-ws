@@ -642,5 +642,12 @@
   <axis xyz="1.0 0.0 0.0"/>
   <dynamics damping="0.01" friction="0.1" />
 </joint>
+  
+  <webots>
+    <device reference="wheel-frame0" type="RotationalMotor"/>
+    <device reference="wheel-frame120" type="RotationalMotor"/>
+    <device reference="wheel-frame240" type="RotationalMotor"/>
+    <plugin type="omni_1_webots.motor_driver.MotorDriver"/>
+  </webots>
 
 </robot>

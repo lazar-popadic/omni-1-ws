@@ -4,7 +4,7 @@ package_name = 'omni_1_webots'
 data_files = []
 data_files.append(('share/ament_index/resource_index/packages', ['resource/' + package_name]))
 data_files.append(('share/' + package_name + '/worlds', ['worlds/my_world.wbt']))
-data_files.append(('share/' + package_name + '/resource', ['resource/omni_1.urdf']))
+# data_files.append(('share/omni_1_description/urdf', ['urdf/omni_1.urdf']))
 data_files.append(('share/' + package_name, ['package.xml']))
 
 setup(
