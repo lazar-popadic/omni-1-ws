@@ -10,12 +10,13 @@ from launch_ros.actions import Node
 def generate_launch_description():
     webots_pkg = get_package_share_directory("omni_1_webots")
     control_pkg = get_package_share_directory("omni_1_control")
+    description_pkg = get_package_share_directory("omni_1_description")
 
-    robot_description_path = os.path.join(webots_pkg, "resource", "omni_1.urdf")
+    robot_description_path = os.path.join(description_pkg, "urdf", "omni_1.urdf")
     webots = WebotsLauncher(world=os.path.join(webots_pkg, "worlds", "my_world.wbt"))
 
     webots_node = WebotsController(
-        robot_name="omni_1",
+        robot_name="omni-1",
         parameters=[
             {"robot_description": robot_description_path},
         ],

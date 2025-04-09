@@ -10,7 +10,7 @@ class MotorDriver:
 
         self.motor_0_ = self.robot_.getDevice("wheel-frame0")
         self.motor_120_ = self.robot_.getDevice("wheel-frame120")
-        self.motor_240_ = self.robot_.getDevice("wheel-fram240")
+        self.motor_240_ = self.robot_.getDevice("wheel-frame240")
 
         self.motor_0_.setPosition(float("inf"))
         self.motor_0_.setVelocity(0)

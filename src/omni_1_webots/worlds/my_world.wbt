@@ -3,13 +3,13 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/CircleArena.proto"
-IMPORTABLE EXTERNPROTO "../protos/omni_1.proto"
 
 WorldInfo {
+  basicTimeStep 8
 }
 Viewpoint {
-  orientation -0.33592520462039416 0.26590984920848887 0.9035741303261537 1.8957208368374516
-  position 0.6664975414557281 -2.8683427460761424 1.9589198100724776
+  orientation -0.3352085394445663 0.2621028342324504 0.9049515674171503 2.0141582411281442
+  position 1.2785984690626009 -3.4728601385371554 2.937443709880219
   followType "None"
 }
 TexturedBackground {
@@ -22,22 +22,17 @@ CircleArena {
 Robot {
   translation 0 0 0.04
   children [
-    Transform {
-      scale 0.001 0.001 0.001
-      children [
-        Shape {
-          appearance DEF silver PBRAppearance {
-            baseColor 0.5 0.5 0.5
-            roughness 1
-            metalness 0
-          }
-          geometry DEF base_link Mesh {
-            url [
-              "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/base_link.stl"
-            ]
-          }
-        }
-      ]
+    Shape {
+      appearance DEF silver PBRAppearance {
+        baseColor 0.5 0.5 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry DEF base_link Mesh {
+        url [
+          "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/base_link.stl"
+        ]
+      }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
@@ -56,24 +51,18 @@ Robot {
       ]
       endPoint Solid {
         translation 0 -0.1 0
-        rotation 0 -1 0 0
         children [
-          Transform {
-            scale 0.001 0.001 0.001
-            children [
-              Shape {
-                appearance DEF grey PBRAppearance {
-                  baseColor 0.5 0.5 0.5
-                  roughness 1
-                  metalness 0
-                }
-                geometry DEF wheel-frame0 Mesh {
-                  url [
-                    "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/wheel-frame0.stl"
-                  ]
-                }
-              }
-            ]
+          Shape {
+            appearance DEF grey PBRAppearance {
+              baseColor 0.5 0.5 0.5
+              roughness 1
+              metalness 0
+            }
+            geometry DEF wheel_frame Mesh {
+              url [
+                "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/wheel_frame.stl"
+              ]
+            }
           }
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -92,11 +81,9 @@ Robot {
             ]
             endPoint Solid {
               translation 0 0.013 0.024
-              rotation 1 0 0 0
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance DEF black PBRAppearance {
@@ -153,9 +140,8 @@ Robot {
               translation 0.020785 0.013 -0.012
               rotation 0 1 0 2.094395
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -204,9 +190,8 @@ Robot {
               translation -0.020785 0.013 -0.012
               rotation 0 1 0 4.18879
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -253,11 +238,10 @@ Robot {
             ]
             endPoint Solid {
               translation 0.020785 -0.013 0.012
-              rotation 0 1 0 1.0471980000000003
+              rotation 0 1 0 1.047198
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -306,9 +290,8 @@ Robot {
               translation 0 -0.013 -0.024
               rotation 0 1 0 3.141593
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -357,9 +340,8 @@ Robot {
               translation -0.020785 -0.013 0.012
               rotation 0 1 0 5.235988
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -390,7 +372,7 @@ Robot {
           }
         ]
         name "wheel-frame0"
-        boundingObject USE wheel-frame0
+        boundingObject USE wheel_frame
         physics Physics {
           density -1
           mass 0.5
@@ -423,18 +405,9 @@ Robot {
         translation 0.086603 0.05 0
         rotation 0 0 1 2.094395
         children [
-          Transform {
-            scale 0.001 0.001 0.001
-            children [
-              Shape {
-                appearance USE grey
-                geometry DEF wheel-frame120 Mesh {
-                  url [
-                    "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/wheel-frame120.stl"
-                  ]
-                }
-              }
-            ]
+          Shape {
+            appearance USE grey
+            geometry USE wheel_frame
           }
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -453,11 +426,9 @@ Robot {
             ]
             endPoint Solid {
               translation 0 0.013 0.024
-              rotation 1 0 0 0
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -506,9 +477,8 @@ Robot {
               translation 0.020785 0.013 -0.012
               rotation 0 1 0 2.094395
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -557,9 +527,8 @@ Robot {
               translation -0.020785 0.013 -0.012
               rotation 0 1 0 4.18879
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -606,11 +575,10 @@ Robot {
             ]
             endPoint Solid {
               translation 0.020785 -0.013 0.012
-              rotation 0 1 0 1.0471980000000003
+              rotation 0 1 0 1.047198
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -659,9 +627,8 @@ Robot {
               translation 0 -0.013 -0.024
               rotation 0 1 0 3.141593
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -710,9 +677,8 @@ Robot {
               translation -0.020785 -0.013 0.012
               rotation 0 1 0 5.235988
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -743,7 +709,7 @@ Robot {
           }
         ]
         name "wheel-frame120"
-        boundingObject USE wheel-frame120
+        boundingObject USE wheel_frame
         physics Physics {
           density -1
           mass 0.5
@@ -776,18 +742,9 @@ Robot {
         translation -0.086603 0.05 0
         rotation 0 0 1 4.18879
         children [
-          Transform {
-            scale 0.001 0.001 0.001
-            children [
-              Shape {
-                appearance USE grey
-                geometry DEF wheel-frame240 Mesh {
-                  url [
-                    "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/wheel-frame240.stl"
-                  ]
-                }
-              }
-            ]
+          Shape {
+            appearance USE grey
+            geometry USE wheel_frame
           }
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -806,11 +763,9 @@ Robot {
             ]
             endPoint Solid {
               translation 0 0.013 0.024
-              rotation 1 0 0 0
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -859,9 +814,8 @@ Robot {
               translation 0.020785 0.013 -0.012
               rotation 0 1 0 2.094395
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -910,9 +864,8 @@ Robot {
               translation -0.020785 0.013 -0.012
               rotation 0 1 0 4.18879
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -959,11 +912,10 @@ Robot {
             ]
             endPoint Solid {
               translation 0.020785 -0.013 0.012
-              rotation 0 1 0 1.0471980000000003
+              rotation 0 1 0 1.047198
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -1012,9 +964,8 @@ Robot {
               translation 0 -0.013 -0.024
               rotation 0 1 0 3.141593
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -1063,9 +1014,8 @@ Robot {
               translation -0.020785 -0.013 0.012
               rotation 0 1 0 5.235988
               children [
-                Transform {
+                Pose {
                   translation 0 0 -0.024
-                  scale 0.001 0.001 0.001
                   children [
                     Shape {
                       appearance USE black
@@ -1096,7 +1046,7 @@ Robot {
           }
         ]
         name "wheel-frame240"
-        boundingObject USE wheel-frame240
+        boundingObject USE wheel_frame
         physics Physics {
           density -1
           mass 0.5
@@ -1111,7 +1061,7 @@ Robot {
       }
     }
   ]
-  name "omni_1"
+  name "omni-1"
   boundingObject USE base_link
   physics Physics {
     density -1
@@ -1120,4 +1070,5 @@ Robot {
       0 0 3.8
     ]
   }
+  controller "<extern>"
 }

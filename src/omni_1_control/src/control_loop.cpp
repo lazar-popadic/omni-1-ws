@@ -14,8 +14,8 @@ public:
     this->declare_parameter ("p", 1.0);
     p_ = this->get_parameter ("p").as_double ();
     this->declare_parameter ("i", 0.0);
-    i_ = this->get_parameter ("p").as_double ();
-    this->declare_parameter ("p", 0.0);
+    i_ = this->get_parameter ("i").as_double ();
+    this->declare_parameter ("d", 0.0);
     d_ = this->get_parameter ("d").as_double ();
 
     // TODO:
@@ -35,7 +35,7 @@ private:
   double freq_hz_;
   int64_t period_us_;
   double x_ref, y_ref, phi_ref;
-  double w0 = 2, w120 = -2, w240 = 0;
+  double w0 = 2, w120 = 2, w240 = 2;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<omni_1_interfaces::msg::MotorCommandArray>::SharedPtr
       motor_cmd_publisher_;
