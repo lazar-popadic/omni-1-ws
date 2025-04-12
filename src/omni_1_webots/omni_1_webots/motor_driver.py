@@ -38,15 +38,6 @@ class MotorDriver:
             self.motor_0_vel_ = motor_cmd.motor_command[0]
             self.motor_120_vel_ = motor_cmd.motor_command[1]
             self.motor_240_vel_ = motor_cmd.motor_command[2]
-            self.node_.get_logger().info(
-                "( "
-                + str(self.motor_0_vel_)
-                + ", "
-                + str(self.motor_120_vel_)
-                + ", "
-                + str(self.motor_240_vel_)
-                + ")"
-            )
         else:
             self.node_.get_logger().info("Recieved invalid motor command.")
 

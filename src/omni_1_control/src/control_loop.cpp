@@ -35,7 +35,7 @@ private:
   double freq_hz_;
   int64_t period_us_;
   double x_ref, y_ref, phi_ref;
-  double w0 = 2, w120 = 2, w240 = 2;
+  double w0 = 4, w120 = -4, w240 = 0;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<omni_1_interfaces::msg::MotorCommandArray>::SharedPtr
       motor_cmd_publisher_;
@@ -66,6 +66,7 @@ main (int argc, char **argv)
 {
   rclcpp::init (argc, argv);
   auto node = std::make_shared<ControlLoopNode> ();
+  sleep (1);
   rclcpp::spin (node);
   rclcpp::shutdown ();
   return 0;
