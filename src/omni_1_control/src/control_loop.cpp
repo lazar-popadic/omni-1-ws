@@ -35,7 +35,7 @@ private:
   double freq_hz_;
   int64_t period_us_;
   double x_ref, y_ref, phi_ref;
-  double w0 = 4, w120 = -4, w240 = 0;
+  double w60 = 4, w180 = -4, w300 = 0;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<omni_1_interfaces::msg::MotorCommandArray>::SharedPtr
       motor_cmd_publisher_;
@@ -45,7 +45,7 @@ private:
   {
     // input:   reference pose            (x, y, φ)
 
-    // output:  reference motor commands  (ω0, ω120, ω240)
+    // output:  reference motor commands  (ω60, ω180, ω300)
     this->publish_motor_cmd ();
   }
 
@@ -54,9 +54,9 @@ private:
   {
     auto msg = omni_1_interfaces::msg::MotorCommandArray ();
     msg.motor_command.resize (3);
-    msg.motor_command[0] = w0;
-    msg.motor_command[1] = w120;
-    msg.motor_command[2] = w240;
+    msg.motor_command[0] = w60;
+    msg.motor_command[1] = w180;
+    msg.motor_command[2] = w300;
     motor_cmd_publisher_->publish (msg);
   }
 };
