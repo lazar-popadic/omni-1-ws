@@ -8,16 +8,16 @@ class MotorDriver:
     def init(self, webots_node, properties):
         self.robot_ = webots_node.robot
 
-        self.motor_0_ = self.robot_.getDevice("wheel-frame0")
-        self.motor_120_ = self.robot_.getDevice("wheel-frame120")
-        self.motor_240_ = self.robot_.getDevice("wheel-frame240")
+        self.motor_60_ = self.robot_.getDevice("wheel-frame60")
+        self.motor_180_ = self.robot_.getDevice("wheel-frame180")
+        self.motor_300_ = self.robot_.getDevice("wheel-frame300")
 
-        self.motor_0_.setPosition(float("inf"))
-        self.motor_0_.setVelocity(0)
-        self.motor_120_.setPosition(float("inf"))
-        self.motor_120_.setVelocity(0)
-        self.motor_240_.setPosition(float("inf"))
-        self.motor_240_.setVelocity(0)
+        self.motor_60_.setPosition(float("inf"))
+        self.motor_60_.setVelocity(0)
+        self.motor_180_.setPosition(float("inf"))
+        self.motor_180_.setVelocity(0)
+        self.motor_300_.setPosition(float("inf"))
+        self.motor_300_.setVelocity(0)
 
         self.target_motor_cmd_ = MotorCommandArray()
 
@@ -27,23 +27,23 @@ class MotorDriver:
             MotorCommandArray, "motor_cmd", self.cmd_vel_callback, 1
         )
 
-        self.motor_0_vel_ = 0
-        self.motor_120_vel_ = 0
-        self.motor_240_vel_ = 0
+        self.motor_60_vel_ = 0
+        self.motor_180_vel_ = 0
+        self.motor_300_vel_ = 0
 
         self.node_.get_logger().info("Webots motor driver is initialized.")
 
     def cmd_vel_callback(self, motor_cmd):
         if len(motor_cmd.motor_command) == 3:
-            self.motor_0_vel_ = motor_cmd.motor_command[0]
-            self.motor_120_vel_ = motor_cmd.motor_command[1]
-            self.motor_240_vel_ = motor_cmd.motor_command[2]
+            self.motor_60_vel_ = motor_cmd.motor_command[0]
+            self.motor_180_vel_ = motor_cmd.motor_command[1]
+            self.motor_300_vel_ = motor_cmd.motor_command[2]
         else:
             self.node_.get_logger().info("Recieved invalid motor command.")
 
     def step(self):
         rclpy.spin_once(self.node_, timeout_sec=0)
 
-        self.motor_0_.setVelocity(self.motor_0_vel_)
-        self.motor_120_.setVelocity(self.motor_120_vel_)
-        self.motor_240_.setVelocity(self.motor_240_vel_)
+        self.motor_60_.setVelocity(self.motor_60_vel_)
+        self.motor_180_.setVelocity(self.motor_180_vel_)
+        self.motor_300_.setVelocity(self.motor_300_vel_)
