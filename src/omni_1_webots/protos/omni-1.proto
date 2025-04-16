@@ -8,7 +8,7 @@ PROTO omni-1 [
   field  SFVec3f     translation     0 0 0
   field  SFRotation  rotation        0 0 1 0
   field  SFString    name            "omni-1"  # Is `Robot.name`.
-  field  SFString    controller      "void"    # Is `Robot.controller`.
+  field  SFString    controller      "extern"  # Is `Robot.controller`.
   field  MFString    controllerArgs  []        # Is `Robot.controllerArgs`.
   field  SFString    customData      ""        # Is `Robot.customData`.
   field  SFBool      supervisor      FALSE     # Is `Robot.supervisor`.
@@ -26,6 +26,14 @@ PROTO omni-1 [
     synchronization IS synchronization
     selfCollision IS selfCollision
     children [
+      ContactProperties {
+          material1 "black"
+          material2 "default"
+          coulombFriction 1.0
+          bounce 0.0
+          forceDependentSlip 0.1
+          maxContactJoints 30
+        }
       Shape {
         appearance DEF silver PBRAppearance {
           baseColor 0.800000 0.800000 0.800000
@@ -91,6 +99,9 @@ PROTO omni-1 [
                           baseColor 0.200000 0.200000 0.200000
                           roughness 1.000000
                           metalness 0
+                          physics Material {
+                            name "black"
+                          }
                         }
                         geometry DEF roller Mesh {
                           url "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/roller.stl"
