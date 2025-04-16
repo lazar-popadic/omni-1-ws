@@ -80,12 +80,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel0-roller0"
+                  name "wheel60-roller0"
                   maxVelocity 100.0
                   maxTorque 0
                 }
                 PositionSensor {
-                  name "wheel0-roller0_sensor"
+                  name "wheel60-roller0_sensor"
                 }
               ]
               endPoint Solid {
@@ -142,12 +142,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel0-roller1"
+                  name "wheel60-roller1"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel0-roller1_sensor"
+                  name "wheel60-roller1_sensor"
                 }
               ]
               endPoint Solid {
@@ -196,12 +196,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel0-roller2"
+                  name "wheel60-roller2"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel0-roller2_sensor"
+                  name "wheel60-roller2_sensor"
                 }
               ]
               endPoint Solid {
@@ -250,12 +250,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel0-roller3"
+                  name "wheel60-roller3"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel0-roller3_sensor"
+                  name "wheel60-roller3_sensor"
                 }
               ]
               endPoint Solid {
@@ -304,12 +304,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel0-roller4"
+                  name "wheel60-roller4"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel0-roller4_sensor"
+                  name "wheel60-roller4_sensor"
                 }
               ]
               endPoint Solid {
@@ -358,12 +358,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel0-roller5"
+                  name "wheel60-roller5"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel0-roller5_sensor"
+                  name "wheel60-roller5_sensor"
                 }
               ]
               endPoint Solid {
@@ -448,12 +448,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel120-roller0"
+                  name "wheel180-roller0"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel120-roller0_sensor"
+                  name "wheel180-roller0_sensor"
                 }
               ]
               endPoint Solid {
@@ -501,12 +501,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel120-roller1"
+                  name "wheel180-roller1"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel120-roller1_sensor"
+                  name "wheel180-roller1_sensor"
                 }
               ]
               endPoint Solid {
@@ -555,12 +555,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel120-roller2"
+                  name "wheel180-roller2"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel120-roller2_sensor"
+                  name "wheel180-roller2_sensor"
                 }
               ]
               endPoint Solid {
@@ -609,12 +609,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel120-roller3"
+                  name "wheel180-roller3"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel120-roller3_sensor"
+                  name "wheel180-roller3_sensor"
                 }
               ]
               endPoint Solid {
@@ -663,12 +663,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel120-roller4"
+                  name "wheel180-roller4"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel120-roller4_sensor"
+                  name "wheel180-roller4_sensor"
                 }
               ]
               endPoint Solid {
@@ -717,12 +717,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel120-roller5"
+                  name "wheel180-roller5"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel120-roller5_sensor"
+                  name "wheel180-roller5_sensor"
                 }
               ]
               endPoint Solid {
@@ -807,12 +807,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel240-roller0"
+                  name "wheel300-roller0"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel240-roller0_sensor"
+                  name "wheel300-roller0_sensor"
                 }
               ]
               endPoint Solid {
@@ -860,12 +860,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel240-roller1"
+                  name "wheel300-roller1"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel240-roller1_sensor"
+                  name "wheel300-roller1_sensor"
                 }
               ]
               endPoint Solid {
@@ -914,12 +914,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel240-roller2"
+                  name "wheel300-roller2"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel240-roller2_sensor"
+                  name "wheel300-roller2_sensor"
                 }
               ]
               endPoint Solid {
@@ -968,12 +968,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel240-roller3"
+                  name "wheel300-roller3"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel240-roller3_sensor"
+                  name "wheel300-roller3_sensor"
                 }
               ]
               endPoint Solid {
@@ -1022,12 +1022,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel240-roller4"
+                  name "wheel300-roller4"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel240-roller4_sensor"
+                  name "wheel300-roller4_sensor"
                 }
               ]
               endPoint Solid {
@@ -1076,12 +1076,12 @@ PROTO omni-1 [
               }
               device [
                 RotationalMotor {
-                  name "wheel240-roller5"
+                  name "wheel300-roller5"
                   maxTorque 0
                   maxVelocity 100.0
                 }
                 PositionSensor {
-                  name "wheel240-roller5_sensor"
+                  name "wheel300-roller5_sensor"
                 }
               ]
               endPoint Solid {
