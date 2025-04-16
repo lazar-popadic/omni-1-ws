@@ -51,12 +51,12 @@ PROTO omni-1 [
         }
         device [
           RotationalMotor {
-            name "wheel-frame0"
+            name "wheel-frame60"
             maxVelocity 20.0
             maxTorque 10.0
           }
           PositionSensor {
-            name "wheel-frame0_sensor"
+            name "wheel-frame60_sensor"
           }
         ]
         endPoint Solid {
@@ -404,7 +404,7 @@ PROTO omni-1 [
               }
             }
           ]
-          name "wheel-frame0"
+          name "wheel-frame60"
           boundingObject USE wheel_frame
           physics Physics {
             density -1
@@ -424,12 +424,12 @@ PROTO omni-1 [
         }
         device [
           RotationalMotor {
-            name "wheel-frame120"
+            name "wheel-frame180"
             maxVelocity 20.0
             maxTorque 10.0
           }
           PositionSensor {
-            name "wheel-frame120_sensor"
+            name "wheel-frame180_sensor"
           }
         ]
         endPoint Solid {
@@ -763,7 +763,7 @@ PROTO omni-1 [
               }
             }
           ]
-          name "wheel-frame120"
+          name "wheel-frame180"
           boundingObject USE wheel_frame
           physics Physics {
             density -1
@@ -783,12 +783,12 @@ PROTO omni-1 [
         }
         device [
           RotationalMotor {
-            name "wheel-frame240"
+            name "wheel-frame300"
             maxVelocity 20.0
             maxTorque 10.0
           }
           PositionSensor {
-            name "wheel-frame240_sensor"
+            name "wheel-frame300_sensor"
           }
         ]
         endPoint Solid {
@@ -1122,7 +1122,7 @@ PROTO omni-1 [
               }
             }
           ]
-          name "wheel-frame240"
+          name "wheel-frame300"
           boundingObject USE wheel_frame
           physics Physics {
             density -1
