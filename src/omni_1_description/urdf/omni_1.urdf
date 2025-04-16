@@ -10,34 +10,34 @@
   </material>
 
   <material name="black">
-    <color rgba="0.1 0.1 0.1 1.0"/>
+    <color rgba="0.2 0.2 0.2 1.0"/>
   </material>
 
   <link name="base_link">
     <inertial>
-      <origin xyz="0 0 3.8" rpy="0 0 0"/>
-      <mass value="4.8"/>
-      <inertia ixx="71.670522" iyy="71.670522" izz="0.0224" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+      <origin xyz="0 0 0" rpy="0 0 2.6177994"/>
+      <mass value="0.7"/>
+      <inertia ixx="0.065" iyy="0.065" izz="0.065" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 2.6177994"/>
       <geometry>
         <mesh filename="package://omni_1_description/meshes/base_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 2.6177994"/>
       <geometry>
         <mesh filename="package://omni_1_description/meshes/base_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
 
-  <link name="wheel-frame0">
+  <link name="wheel-frame60">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.5"/>
+      <mass value="0.1"/>
       <inertia ixx="1.7e-4" iyy="1.8e-4" izz="1.7e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -55,10 +55,10 @@
     </collision>
   </link>
 
-  <link name="wheel-frame120">
+  <link name="wheel-frame180">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.5"/>
+      <mass value="0.1"/>
       <inertia ixx="1.7e-4" iyy="1.8e-4" izz="1.7e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -76,10 +76,10 @@
     </collision>
   </link>
 
-  <link name="wheel-frame240">
+  <link name="wheel-frame300">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.5"/>
+      <mass value="0.1"/>
       <inertia ixx="1.7e-4" iyy="1.8e-4" izz="1.7e-4" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -100,7 +100,7 @@
   <link name="roller-0-0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -121,7 +121,7 @@
   <link name="roller-0-1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -142,7 +142,7 @@
   <link name="roller-0-2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -163,7 +163,7 @@
   <link name="roller-0-3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -184,7 +184,7 @@
   <link name="roller-0-4">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -205,7 +205,7 @@
   <link name="roller-0-5">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -226,7 +226,7 @@
   <link name="roller-2-0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -247,7 +247,7 @@
   <link name="roller-2-1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -268,7 +268,7 @@
   <link name="roller-2-2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -289,7 +289,7 @@
   <link name="roller-2-3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -310,7 +310,7 @@
   <link name="roller-2-4">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -331,7 +331,7 @@
   <link name="roller-2-5">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -352,7 +352,7 @@
   <link name="roller-1-0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -373,7 +373,7 @@
   <link name="roller-1-1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -394,7 +394,7 @@
   <link name="roller-1-2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -415,7 +415,7 @@
   <link name="roller-1-3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -436,7 +436,7 @@
   <link name="roller-1-4">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -457,7 +457,7 @@
   <link name="roller-1-5">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.02"/>
+      <mass value="0.002"/>
       <inertia ixx="2.7e-6" iyy="2.7e-6" izz="1.0e-6" ixy="0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
     <visual>
@@ -475,178 +475,178 @@
     </collision>
   </link>
 
-  <joint name="wheel-frame0" type="continuous">
-    <origin xyz="0.0 -0.1 0.0" rpy="0 0 0"/>
+  <joint name="wheel-frame60" type="continuous">
+    <origin xyz="0.05 0.08660254038 0.0" rpy="0 0 -0.5235987756"/>
     <parent link="base_link"/>
-    <child link="wheel-frame0"/>
+    <child link="wheel-frame60"/>
     <axis xyz="0.0 -1.0 0.0"/>
-    <limit effort="100" velocity="100"/>
+    <limit effort="10" velocity="10"/>
   </joint>
   
-  <joint name="wheel-frame120" type="continuous">
-    <origin xyz="0.08660254038 0.05 0.0" rpy="0 0 2.094395102"/>
+  <joint name="wheel-frame180" type="continuous">
+    <origin xyz="-0.1 0.0 0.0" rpy="0 0 1.570796327"/>
     <parent link="base_link"/>
-    <child link="wheel-frame120"/>
+    <child link="wheel-frame180"/>
     <axis xyz="0.0 -1.0 0.0"/>
-    <limit effort="100" velocity="100"/>
+    <limit effort="10" velocity="10"/>
   </joint>
 
-  <joint name="wheel-frame240" type="continuous">
-    <origin xyz="-0.08660254038 0.05 0.0" rpy="0 0 4.188790205"/>
+  <joint name="wheel-frame300" type="continuous">
+    <origin xyz="0.05 -0.08660254038 0." rpy="0 0 -2.617993878"/>
     <parent link="base_link"/>
-    <child link="wheel-frame240"/>
+    <child link="wheel-frame300"/>
     <axis xyz="0.0 -1.0 0.0"/>
-    <limit effort="100" velocity="100"/>
+    <limit effort="10" velocity="10"/>
   </joint>
 
-  <joint name="wheel240-roller0" type="continuous">
+  <joint name="wheel300-roller0" type="continuous">
     <origin xyz="0.0 0.013 0.024" rpy="0 0 0"/>
-    <parent link="wheel-frame240"/>
+    <parent link="wheel-frame300"/>
     <child link="roller-2-0"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel240-roller1" type="continuous">
+  <joint name="wheel300-roller1" type="continuous">
     <origin xyz="0.0207846 0.013 -0.012" rpy="0 2.094395102 0"/>
-    <parent link="wheel-frame240"/>
+    <parent link="wheel-frame300"/>
     <child link="roller-2-1"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel240-roller2" type="continuous">
+  <joint name="wheel300-roller2" type="continuous">
     <origin xyz="-0.0207846 0.013 -0.012" rpy="0 4.188790205 0"/>
-    <parent link="wheel-frame240"/>
+    <parent link="wheel-frame300"/>
     <child link="roller-2-2"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel240-roller3" type="continuous">
+  <joint name="wheel300-roller3" type="continuous">
     <origin xyz="0.0207846 -0.013 0.012" rpy="0 1.0471975512 0"/>
-    <parent link="wheel-frame240"/>
+    <parent link="wheel-frame300"/>
     <child link="roller-2-3"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel240-roller4" type="continuous">
+  <joint name="wheel300-roller4" type="continuous">
     <origin xyz="0.0 -0.013 -0.024" rpy="0 3.1415926536 0"/>
-    <parent link="wheel-frame240"/>
+    <parent link="wheel-frame300"/>
     <child link="roller-2-4"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel240-roller5" type="continuous">
+  <joint name="wheel300-roller5" type="continuous">
     <origin xyz="-0.0207846 -0.013 0.012" rpy="0 5.235987756 0"/>
-    <parent link="wheel-frame240"/>
+    <parent link="wheel-frame300"/>
     <child link="roller-2-5"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel120-roller0" type="continuous">
+  <joint name="wheel180-roller0" type="continuous">
     <origin xyz="0.0 0.013 0.024" rpy="0 0 0"/>
-    <parent link="wheel-frame120"/>
+    <parent link="wheel-frame180"/>
     <child link="roller-1-0"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel120-roller1" type="continuous">
+  <joint name="wheel180-roller1" type="continuous">
     <origin xyz="0.0207846 0.013 -0.012" rpy="0 2.094395102 0"/>
-    <parent link="wheel-frame120"/>
+    <parent link="wheel-frame180"/>
     <child link="roller-1-1"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel120-roller2" type="continuous">
+  <joint name="wheel180-roller2" type="continuous">
     <origin xyz="-0.0207846 0.013 -0.012" rpy="0 4.188790205 0"/>
-    <parent link="wheel-frame120"/>
+    <parent link="wheel-frame180"/>
     <child link="roller-1-2"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel120-roller3" type="continuous">
+  <joint name="wheel180-roller3" type="continuous">
     <origin xyz="0.0207846 -0.013 0.012" rpy="0 1.0471975512 0"/>
-    <parent link="wheel-frame120"/>
+    <parent link="wheel-frame180"/>
     <child link="roller-1-3"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel120-roller4" type="continuous">
+  <joint name="wheel180-roller4" type="continuous">
     <origin xyz="0.0 -0.013 -0.024" rpy="0 3.1415926536 0"/>
-    <parent link="wheel-frame120"/>
+    <parent link="wheel-frame180"/>
     <child link="roller-1-4"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel120-roller5" type="continuous">
+  <joint name="wheel180-roller5" type="continuous">
     <origin xyz="-0.0207846 -0.013 0.012" rpy="0 5.235987756 0"/>
-    <parent link="wheel-frame120"/>
+    <parent link="wheel-frame180"/>
     <child link="roller-1-5"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel0-roller0" type="continuous">
+  <joint name="wheel60-roller0" type="continuous">
     <origin xyz="0.0 0.013 0.024" rpy="0 0 0"/>
-    <parent link="wheel-frame0"/>
+    <parent link="wheel-frame60"/>
     <child link="roller-0-0"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel0-roller1" type="continuous">
+  <joint name="wheel60-roller1" type="continuous">
     <origin xyz="0.0207846 0.013 -0.012" rpy="0 2.094395102 0"/>
-    <parent link="wheel-frame0"/>
+    <parent link="wheel-frame60"/>
     <child link="roller-0-1"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel0-roller2" type="continuous">
+  <joint name="wheel60-roller2" type="continuous">
     <origin xyz="-0.0207846 0.013 -0.012" rpy="0 4.188790205 0"/>
-    <parent link="wheel-frame0"/>
+    <parent link="wheel-frame60"/>
     <child link="roller-0-2"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel0-roller3" type="continuous">
+  <joint name="wheel60-roller3" type="continuous">
     <origin xyz="0.0207846 -0.013 0.012" rpy="0 1.0471975512 0"/>
-    <parent link="wheel-frame0"/>
+    <parent link="wheel-frame60"/>
     <child link="roller-0-3"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel0-roller4" type="continuous">
+  <joint name="wheel60-roller4" type="continuous">
     <origin xyz="0.0 -0.013 -0.024" rpy="0 3.1415926536 0"/>
-    <parent link="wheel-frame0"/>
+    <parent link="wheel-frame60"/>
     <child link="roller-0-4"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
 
-  <joint name="wheel0-roller5" type="continuous">
+  <joint name="wheel60-roller5" type="continuous">
     <origin xyz="-0.0207846 -0.013 0.012" rpy="0 5.235987756 0"/>
-    <parent link="wheel-frame0"/>
+    <parent link="wheel-frame60"/>
     <child link="roller-0-5"/>
     <axis xyz="1.0 0.0 0.0"/>
     <dynamics damping="0.01" friction="0.1" />
   </joint>
   
   <webots>
-    <device reference="wheel-frame0" type="RotationalMotor"/>
-    <device reference="wheel-frame120" type="RotationalMotor"/>
-    <device reference="wheel-frame240" type="RotationalMotor"/>
+    <device reference="wheel-frame60" type="RotationalMotor"/>
+    <device reference="wheel-frame180" type="RotationalMotor"/>
+    <device reference="wheel-frame300" type="RotationalMotor"/>
     <plugin type="omni_1_webots.motor_driver.MotorDriver"/>
   </webots>
 

@@ -6,11 +6,23 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/project
 EXTERNPROTO "../protos/omni-1.proto"
 
 WorldInfo {
+  CFM 0.0001
   basicTimeStep 8
+  FPS 600
+  optimalThreadCount 8
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        0.8
+      ]
+      bounce 0.01
+      maxContactJoints 60
+    }
+  ]
 }
 Viewpoint {
-  orientation -0.38499035153870603 0.29981204169964754 0.8728660658279667 1.947593721264655
-  position 0.7328488152157434 -3.006653506528415 3.2823499505332205
+  orientation -0.31450657414210126 0.19817832324556056 0.9283377440441475 2.0830145438466516
+  position 1.5163520668026154 -3.2464789452642138 2.3935798625195943
   followType "None"
 }
 TexturedBackground {
@@ -21,6 +33,6 @@ CircleArena {
   radius 2
 }
 omni-1 {
-  translation 0 0 0.04
+  translation 0 0 0.05
   controller "<extern>"
 }

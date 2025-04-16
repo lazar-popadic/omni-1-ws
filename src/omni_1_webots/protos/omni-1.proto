@@ -8,7 +8,7 @@ PROTO omni-1 [
   field  SFVec3f     translation     0 0 0
   field  SFRotation  rotation        0 0 1 0
   field  SFString    name            "omni-1"  # Is `Robot.name`.
-  field  SFString    controller      "extern"  # Is `Robot.controller`.
+  field  SFString    controller      "none"    # Is `Robot.controller`.
   field  MFString    controllerArgs  []        # Is `Robot.controllerArgs`.
   field  SFString    customData      ""        # Is `Robot.customData`.
   field  SFBool      supervisor      FALSE     # Is `Robot.supervisor`.
@@ -26,33 +26,30 @@ PROTO omni-1 [
     synchronization IS synchronization
     selfCollision IS selfCollision
     children [
-      ContactProperties {
-          material1 "black"
-          material2 "default"
-          coulombFriction 1.0
-          bounce 0.0
-          forceDependentSlip 0.1
-          maxContactJoints 30
-        }
-      Shape {
-        appearance DEF silver PBRAppearance {
-          baseColor 0.800000 0.800000 0.800000
-          roughness 0.400000
-          metalness 0.4
-        }
-        geometry DEF base_link Mesh {
-          url "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/base_link.stl"
-        }
+      Pose {
+        rotation 0.000000 0.000000 1.000000 2.617799
+        children [
+          Shape {
+            appearance DEF silver PBRAppearance {
+              baseColor 0.800000 0.800000 0.800000
+              roughness 0.400000
+              metalness 1
+            }
+            geometry DEF base_link Mesh {
+              url "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/base_link.stl"
+            }
+          }
+        ]
       }
       HingeJoint {
         jointParameters HingeJointParameters {
-          axis 0.000000 -1.000000 0.000000
-          anchor 0.000000 -0.100000 0.000000
+          axis -0.500000 -0.866025 0.000000
+          anchor 0.050000 0.086603 0.000000
         }
         device [
           RotationalMotor {
             name "wheel-frame60"
-            maxVelocity 20.0
+            maxVelocity 10.0
             maxTorque 10.0
           }
           PositionSensor {
@@ -60,7 +57,8 @@ PROTO omni-1 [
           }
         ]
         endPoint Solid {
-          translation 0.000000 -0.100000 0.000000
+          translation 0.050000 0.086603 0.000000
+          rotation 0.000000 0.000000 -1.000000 0.523599
           children [
             Shape {
               appearance DEF grey PBRAppearance {
@@ -75,17 +73,16 @@ PROTO omni-1 [
             HingeJoint {
               jointParameters HingeJointParameters {
                 anchor 0.000000 0.013000 0.024000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel60-roller0"
                   maxVelocity 100.0
                   maxTorque 0
-                }
-                PositionSensor {
-                  name "wheel60-roller0_sensor"
                 }
               ]
               endPoint Solid {
@@ -99,9 +96,6 @@ PROTO omni-1 [
                           baseColor 0.200000 0.200000 0.200000
                           roughness 1.000000
                           metalness 0
-                          physics Material {
-                            name "black"
-                          }
                         }
                         geometry DEF roller Mesh {
                           url "/home/hostuser/omni-1-ws/src/omni_1_description/meshes/roller.stl"
@@ -119,17 +113,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -137,17 +130,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -0.500000 0.000000 -0.866025
                 anchor 0.020785 0.013000 -0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel60-roller1"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel60-roller1_sensor"
                 }
               ]
               endPoint Solid {
@@ -173,17 +165,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -191,17 +182,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -0.500000 0.000000 0.866025
                 anchor -0.020785 0.013000 -0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel60-roller2"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel60-roller2_sensor"
                 }
               ]
               endPoint Solid {
@@ -227,17 +217,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -245,17 +234,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis 0.500000 0.000000 -0.866025
                 anchor 0.020785 -0.013000 0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel60-roller3"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel60-roller3_sensor"
                 }
               ]
               endPoint Solid {
@@ -281,17 +269,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -299,17 +286,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -1.000000 0.000000 0.000000
                 anchor 0.000000 -0.013000 -0.024000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel60-roller4"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel60-roller4_sensor"
                 }
               ]
               endPoint Solid {
@@ -335,17 +321,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -353,17 +338,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis 0.500000 0.000000 0.866025
                 anchor -0.020785 -0.013000 0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel60-roller5"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel60-roller5_sensor"
                 }
               ]
               endPoint Solid {
@@ -389,17 +373,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -419,13 +402,13 @@ PROTO omni-1 [
       }
       HingeJoint {
         jointParameters HingeJointParameters {
-          axis 0.866025 0.500000 0.000000
-          anchor 0.086603 0.050000 0.000000
+          axis 1.000000 0.000000 0.000000
+          anchor -0.100000 0.000000 0.000000
         }
         device [
           RotationalMotor {
             name "wheel-frame180"
-            maxVelocity 20.0
+            maxVelocity 10.0
             maxTorque 10.0
           }
           PositionSensor {
@@ -433,8 +416,8 @@ PROTO omni-1 [
           }
         ]
         endPoint Solid {
-          translation 0.086603 0.050000 0.000000
-          rotation 0.000000 0.000000 1.000000 2.094395
+          translation -0.100000 0.000000 0.000000
+          rotation 0.000000 0.000000 1.000000 1.570796
           children [
             Shape {
               appearance USE grey
@@ -443,17 +426,16 @@ PROTO omni-1 [
             HingeJoint {
               jointParameters HingeJointParameters {
                 anchor 0.000000 0.013000 0.024000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel180-roller0"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel180-roller0_sensor"
                 }
               ]
               endPoint Solid {
@@ -478,17 +460,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -496,17 +477,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -0.500000 0.000000 -0.866025
                 anchor 0.020785 0.013000 -0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel180-roller1"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel180-roller1_sensor"
                 }
               ]
               endPoint Solid {
@@ -532,17 +512,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -550,17 +529,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -0.500000 0.000000 0.866025
                 anchor -0.020785 0.013000 -0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel180-roller2"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel180-roller2_sensor"
                 }
               ]
               endPoint Solid {
@@ -586,17 +564,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -604,17 +581,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis 0.500000 0.000000 -0.866025
                 anchor 0.020785 -0.013000 0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel180-roller3"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel180-roller3_sensor"
                 }
               ]
               endPoint Solid {
@@ -640,17 +616,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -658,17 +633,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -1.000000 0.000000 0.000000
                 anchor 0.000000 -0.013000 -0.024000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel180-roller4"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel180-roller4_sensor"
                 }
               ]
               endPoint Solid {
@@ -694,17 +668,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -712,17 +685,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis 0.500000 0.000000 0.866025
                 anchor -0.020785 -0.013000 0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel180-roller5"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel180-roller5_sensor"
                 }
               ]
               endPoint Solid {
@@ -748,17 +720,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -778,13 +749,13 @@ PROTO omni-1 [
       }
       HingeJoint {
         jointParameters HingeJointParameters {
-          axis -0.866025 0.500000 0.000000
-          anchor -0.086603 0.050000 0.000000
+          axis -0.500000 0.866025 0.000000
+          anchor 0.050000 -0.086603 0.000000
         }
         device [
           RotationalMotor {
             name "wheel-frame300"
-            maxVelocity 20.0
+            maxVelocity 10.0
             maxTorque 10.0
           }
           PositionSensor {
@@ -792,8 +763,8 @@ PROTO omni-1 [
           }
         ]
         endPoint Solid {
-          translation -0.086603 0.050000 0.000000
-          rotation -0.000000 0.000000 1.000000 4.188790
+          translation 0.050000 -0.086603 0.000000
+          rotation 0.000000 0.000000 -1.000000 2.617799
           children [
             Shape {
               appearance USE grey
@@ -802,17 +773,16 @@ PROTO omni-1 [
             HingeJoint {
               jointParameters HingeJointParameters {
                 anchor 0.000000 0.013000 0.024000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel300-roller0"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel300-roller0_sensor"
                 }
               ]
               endPoint Solid {
@@ -837,17 +807,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -855,17 +824,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -0.500000 0.000000 -0.866025
                 anchor 0.020785 0.013000 -0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel300-roller1"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel300-roller1_sensor"
                 }
               ]
               endPoint Solid {
@@ -891,17 +859,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -909,17 +876,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -0.500000 0.000000 0.866025
                 anchor -0.020785 0.013000 -0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel300-roller2"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel300-roller2_sensor"
                 }
               ]
               endPoint Solid {
@@ -945,17 +911,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -963,17 +928,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis 0.500000 0.000000 -0.866025
                 anchor 0.020785 -0.013000 0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel300-roller3"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel300-roller3_sensor"
                 }
               ]
               endPoint Solid {
@@ -999,17 +963,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -1017,17 +980,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis -1.000000 0.000000 0.000000
                 anchor 0.000000 -0.013000 -0.024000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel300-roller4"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel300-roller4_sensor"
                 }
               ]
               endPoint Solid {
@@ -1053,17 +1015,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -1071,17 +1032,16 @@ PROTO omni-1 [
               jointParameters HingeJointParameters {
                 axis 0.500000 0.000000 0.866025
                 anchor -0.020785 -0.013000 0.012000
-                dampingConstant 0
-                staticFriction 0.01
+                dampingConstant 0.01
+                staticFriction 0.1
+                suspensionSpringConstant 1e6
+                suspensionDampingConstant 100
               }
               device [
                 RotationalMotor {
                   name "wheel300-roller5"
                   maxTorque 0
                   maxVelocity 100.0
-                }
-                PositionSensor {
-                  name "wheel300-roller5_sensor"
                 }
               ]
               endPoint Solid {
@@ -1107,17 +1067,16 @@ PROTO omni-1 [
                 }
                 physics Physics {
                   density -1
-                  mass 0.0020000
+                  mass 0.010000
                   centerOfMass [ 0.000000 0.000000 0.000000 ]
                   inertiaMatrix [
-                    2.700000e-06 2.700000e-06 1.000000e-06
+                    5.0e-06 5.0e-06 2.0e-06
                     0.000000e+00 0.000000e+00 0.000000e+00
                   ]
                   damping Damping {
-                    linear  0.01
-                    angular 0.01
+                    linear 0.02
+                    angular 0.02
                   }
-                  restitution 0.0
                 }
               }
             }
@@ -1137,13 +1096,18 @@ PROTO omni-1 [
       }
     ]
     name IS name
-    boundingObject USE base_link
+    boundingObject Pose {
+      rotation 0.000000 0.000000 1.000000 2.617799
+      children [
+        USE base_link
+      ]
+    }
     physics Physics {
       density -1
-      mass 0.7
+      mass 4.8
       centerOfMass [ 0.000000 0.000000 0.000000 ]
       inertiaMatrix [
-        0.065 0.065 0.065
+        6.500000e-02 6.500000e-02 6.500000e-02
         0.000000e+00 0.000000e+00 0.000000e+00
       ]
     }

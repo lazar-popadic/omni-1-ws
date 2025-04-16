@@ -35,7 +35,7 @@ private:
   double freq_hz_;
   int64_t period_us_;
   double x_ref, y_ref, phi_ref;
-  double w60 = 4, w180 = -4, w300 = 0;
+  double w60 = -5, w180 = 10, w300 = -5;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<omni_1_interfaces::msg::MotorCommandArray>::SharedPtr
       motor_cmd_publisher_;
@@ -43,7 +43,7 @@ private:
   void
   control_loop ()
   {
-    // input:   reference pose            (x, y, φ)
+    // input:   reference velocities            (vx, vy, w)
 
     // output:  reference motor commands  (ω60, ω180, ω300)
     this->publish_motor_cmd ();
